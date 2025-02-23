@@ -1,0 +1,19 @@
+spring:
+  mydatasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/actsystem?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: rz37873@#
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+  kafka:
+    radius:
+      consumer:
+        bootstrap-servers: 127.0.0.1:9092
+        group-id: test1
+      producer:
+        bootstrap-servers: 127.0.0.1:9092
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
