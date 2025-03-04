@@ -1,6 +1,12 @@
 server:
-  port: 8080
+  port: 9000
 spring:
+  application:
+    name: service-provider
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2182
+
   mydatasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/actsystem?useUnicode=true&characterEncoding=UTF-8
@@ -29,4 +35,4 @@ dubbo:
     port: -1
   registry:
     id: zk
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://127.0.0.1:2182

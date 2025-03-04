@@ -19,7 +19,7 @@ public class TestController {
     private DemoClient demoClient;
 
     @GetMapping("testRedis")
-    public void testRedis() {
+    public void testRedis() throws Exception {
         // redisService.test1();
         redisService.testLock();
     }

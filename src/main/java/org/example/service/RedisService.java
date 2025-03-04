@@ -24,10 +24,14 @@ public class RedisService {
         System.out.println(goodsEntity1.getName());
     }
 
-    public void testLock() {
+    public void testLock() throws Exception {
         Boolean res = stringRedisTemplate.opsForValue().setIfAbsent("test:lock", "1", 60, TimeUnit.SECONDS);
         System.out.println("第一次加锁结果 = " + res);
         res = stringRedisTemplate.opsForValue().setIfAbsent("test:lock", "1", 60, TimeUnit.SECONDS);
         System.out.println("第二次加锁结果 = " + res);
+
+        throw new Exception("test");
     }
+
+
 }
